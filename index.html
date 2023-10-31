@@ -1,51 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <title>Frontend Mentor | Notifications page</title>
+    <script type="module" src="./assets/scripts.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="c-notifications">
+        <div class="c-notifications__header">
+          <div class="c-notifications__flex">
+            <h1 class="c-notifications__title">
+              Notifications
+              <span class="c-badge"></span>
+            </h1>
+          </div>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Notifications page</title>
+          <button class="c-btn">Mark all as read</button>
+        </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <div class="c-notifications__body">
+          <div class="l-notifications">
+            <div class="l-notifications__item">
+              <div class="c-notification c-notification--no-read">
+                <div class="c-notification__header">
+                  <img src="./assets/images/avatar-mark-webber.webp" alt="Mark Webber image profile" />
+                </div>
 
-  Notifications 3
+                <div class="c-notification__body">
+                  <p class="c-notification__text">
+                    <a class="c-notification__name" href="#">Mark Webber</a> reacted to your recent post
+                    <a class="c-notification__event" href="#">My first tournament today!</a>
+                  </p>
+                  <p class="c-notification__time"><time>1m ago</time></p>
+                </div>
+              </div>
+            </div>
 
-  Mark all as read
+            <div class="l-notifications__item">
+              <div class="c-notification c-notification--no-read">
+                <div class="c-notification__header">
+                  <img src="./assets/images/avatar-angela-gray.webp" alt="Angela Gray image profile" />
+                </div>
 
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
+                <div class="c-notification__body">
+                  <p class="c-notification__text"><a class="c-notification__name" href="#">Angela Gray</a> followed you</p>
+                  <p class="c-notification__time"><time>5m ago</time></p>
+                </div>
+              </div>
+            </div>
 
-  Angela Gray followed you
-  5m ago
+            <div class="l-notifications__item">
+              <div class="c-notification c-notification--no-read">
+                <div class="c-notification__header">
+                  <img src="./assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson image profile" />
+                </div>
 
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
+                <div class="c-notification__body">
+                  <p class="c-notification__text">
+                    <a class="c-notification__name" href="#">Jacob Thompson</a> has joined your group
+                    <a class="c-notification__event" href="#">Chess Club</a>
+                  </p>
+                  <p class="c-notification__time"><time>1 day ago</time></p>
+                </div>
+              </div>
+            </div>
 
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
+            <div class="l-notifications__item">
+              <div class="c-notification">
+                <div class="c-notification__header">
+                  <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin image profile" />
+                </div>
 
-  Kimberly Smith commented on your picture
-  1 week ago
+                <div class="c-notification__body">
+                  <p class="c-notification__text"><a class="c-notification__name" href="#">Rizky Hasanuddin</a> sent you a private message</p>
+                  <p class="c-notification__time"><time>5 days ago</time></p>
+                  <p class="c-notification__reply">
+                    Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and
+                    improving my game.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
+            <div class="l-notifications__item">
+              <div class="c-notification">
+                <div class="c-notification__header">
+                  <img src="./assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith image profile" />
+                </div>
 
-  Anna Kim left the group Chess Club
-  2 weeks ago
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+                <div class="c-notification__body">
+                  <p class="c-notification__text"><a class="c-notification__name" href="#">Kimberly Smith</a> commented on your picture</p>
+                  <p class="c-notification__time"><time>1 week ago</time></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="l-notifications__item">
+              <div class="c-notification">
+                <div class="c-notification__header">
+                  <img src="./assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson image profile" />
+                </div>
+
+                <div class="c-notification__body">
+                  <p class="c-notification__text">
+                    <a class="c-notification__name" href="#">Nathan Peterson</a> reacted to your recent post
+                    <a class="c-notification__event" href="#">5 end-game strategies to increase your win rate</a>
+                  </p>
+                  <p class="c-notification__time"><time>2 weeks ago</time></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="l-notifications__item">
+              <div class="c-notification">
+                <div class="c-notification__header">
+                  <img src="./assets/images/avatar-anna-kim.webp" alt="Anna Kim image profile" />
+                </div>
+
+                <div class="c-notification__body">
+                  <p class="c-notification__text">
+                    <a class="c-notification__name" href="#">Anna Kim</a> left the group
+                    <a class="c-notification__event" href="#">Chess Club</a>
+                  </p>
+                  <p class="c-notification__time"><time>2 weeks ago</time></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

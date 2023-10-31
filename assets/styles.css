@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+:root {
+  /* Primary */
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+  /* Typography */
+  --font-weight-medium: 500;
+  --font-weight-extra-bold: 800;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* c-notificacions */
+.c-notifications {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.c-notifications__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.c-notifications__title {
+  font-size: 1.5rem;
+}
+
+/* c-button */
+.c-btn {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: var(--dark-grayish-blue);
+}
+.c-btn:hover {
+  color: var(--blue);
+}
+
+/* c-badge */
+.c-badge {
+  display: inline-block;
+  background-color: var(--blue);
+  padding: 0.35em 0.7em;
+  border-radius: 0.5rem;
+  color: var(--white);
+  line-height: 1;
+  font-size: 0.75em;
+  vertical-align: top;
+}
+
+/* c-notificacion */
+.c-notification {
+  background: var(--white);
+  border-radius: 0.5rem;
+  color: var(--dark-grayish-blue);
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.c-notification__header {
+  flex: 0 0 60px;
+}
+
+.c-notification__body {
+  flex-grow: 1;
+}
+
+.c-notification__name {
+  text-decoration: none;
+  color: var(--very-dark-blue);
+  font-weight: var(--font-weight-extra-bold);
+}
+.c-notification__name:hover {
+  color: var(--blue);
+}
+
+.c-notification__event {
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+  font-weight: var(--font-weight-extra-bold);
+}
+.c-notification__event:hover {
+  color: var(--blue);
+}
+
+.c-notification__time {
+  color: var(--grayish-blue);
+}
+
+.c-notification--no-read {
+  background: var(--light-grayish-blue-2);
+  padding: 1rem;
+}
+
+.c-notification__reply {
+  outline: 1px solid var(--grayish-blue);
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+  transition: 0.25s;
+}
+.c-notification__reply:hover {
+  outline: none;
+  background: var(--light-grayish-blue-1);
+}
+
+.c-notification--no-read .c-notification__text::after {
+  content: "";
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  margin-left: 0.2rem;
+}
+
+/* l-notifications */
+.l-notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--very-light-grayish-blue);
+  }
+
+  .c-notifications {
+    max-width: 800px;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+}
